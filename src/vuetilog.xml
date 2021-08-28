@@ -72,6 +72,20 @@
             color: $(header.font.color) !important;
         }
 
+		header #blog-title {
+			width: calc(100% - 48px);
+		}
+
+		header #blog-title .v-app-bar-title__content,
+ 		header #blog-title .v-app-bar-title__placeholder {
+			width: 100% !important;
+		}
+
+		header #blog-title .v-app-bar-title__content a,
+		header #blog-title .v-app-bar-title__placeholder a {
+			width: 100% !important;
+		}
+
         header .v-icon {
             color: $(header.font.color) !important;
         }
@@ -92,7 +106,7 @@
 		.v-navigation-drawer .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
 			color: $(sidebar.font.color) !important;
 		}
-		/* #1976d2 */
+
 		.v-navigation-drawer .widget .title,
  		.v-navigation-drawer .v-subheader {
 			color: $(sidebar.font.color) !important;
@@ -102,15 +116,19 @@
         .BlogArchive ul
 		{
 			list-style: none;
-			padding: 0px;
+			padding: 0px !important;
 		}
 
 		.BlogArchive .hierarchy ul
 		{
-			padding: 0px 0px 0px 16px;
+			padding: 0px 0px 0px 16px !important;
 		}
 
         #NavTop {
+            padding: 8px 16px;
+        }
+
+        #NavBottom {
             padding: 8px 16px;
         }
 
@@ -124,9 +142,25 @@
 			color: rgba(0,0,0,.6);
         }
 
-        #NavBottom {
-            padding: 8px 16px;
+        #NavTop .widget ul,
+        #NavBottom .widget ul,
+ 		#NavTop .widget ol,
+        #NavBottom .widget ol {
+			list-style: none;
+			padding-left: 0px;
         }
+
+		#NavTop .Profile ul li,
+		#NavBottom .Profile ul li {
+			margin-bottom: 10px;
+		}
+
+		#NavTop .Profile .team-member img,
+		#NavTop .Profile .team-member span,
+        #NavBottom .Profile .team-member img,
+		#NavBottom .Profile .team-member span {
+			vertical-align: middle;
+		}
 
         .v-application--is-ltr .v-navigation-drawer .LabelSection .v-list-group--sub-group,
         .v-application--is-ltr .v-navigation-drawer .LabelSection .v-list-group--no-action.v-list-group--sub-group>.v-list-group__items {
@@ -162,6 +196,16 @@
         main .container {
             max-width: 780px;
             min-height: 100vh;
+        }
+
+        main .container .post iframe,
+		main .container .post object,
+		main .container .post embed
+        {
+			max-width: 756px;
+			max-height: 425px;
+			width: calc(100vw - 42px) !important;
+			height: calc((100vw - 42px) / 16 * 9) !important;
         }
 
         main .container .blog-pagination {
@@ -376,6 +420,7 @@
         .hidden {
             display: none;
         }
+
     ]]></b:skin>
 
 
@@ -2088,10 +2133,9 @@
             <v-icon>mdi-arrow-left </v-icon>
           </v-btn>
           <v-app-bar-nav-icon v-if='!search' v-on:click.stop='drawer = !drawer'/>
-          <v-app-bar-title v-if='!search'>
+          <v-app-bar-title class='blog-title' id='blog-title' v-if='!search'>
             <a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><data:blog.title/></a>
           </v-app-bar-title>
-          <v-spacer v-if='!search'/>
           <v-btn icon='true' v-if='!search' v-on:click.stop='search = !search'>
             <v-icon>mdi-magnify</v-icon>
           </v-btn>

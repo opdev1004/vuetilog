@@ -48,7 +48,7 @@ MIT
 2. 웹브로우저가 블로그 페이지 로드
 3. head 태그에서 Vue, Vuetify, CSS 등등을 로드
 4. Vue로 로딩 오버레이 생성
-5. 컴포넌트화 될 요소들이 담킨 id='init-wrapper' div 태그를 훑고 지나감
+5. 컴포넌트화 될 요소들이 담긴 id='init-wrapper' div 태그를 훑고 지나감
 6. Vue 앱 템플릿을 훑고 지나감
 7. id='init-wrapper' div 태그 안 요소들을 컴포넌트화
 8. init-wrapper div 태그 제거

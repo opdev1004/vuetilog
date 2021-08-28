@@ -2271,10 +2271,10 @@
 				shareButton.setAttribute('small', 'true');
 				shareButton.setAttribute('elevation', '0');
 
-                if(shareButton.title === "Share to Facebook") shareButton.innerHTML = '<v-icon>mdi-facebook</v-icon>';
-                else if(shareButton.title === "Share to Twitter") shareButton.innerHTML = '<v-icon>mdi-twitter</v-icon>';
-                else if(shareButton.title === "Share to Pinterest") shareButton.innerHTML = '<v-icon>mdi-pinterest</v-icon>'
-                else if(shareButton.title === "Email") shareButton.innerHTML = '<v-icon>mdi-email</v-icon>'
+                if(shareButton.classList.contains('sharing-element-facebook')) shareButton.innerHTML = '<v-icon>mdi-facebook</v-icon>';
+                else if(shareButton.classList.contains('sharing-element-twitter')) shareButton.innerHTML = '<v-icon>mdi-twitter</v-icon>';
+                else if(shareButton.classList.contains('sharing-element-pinterest')) shareButton.innerHTML = '<v-icon>mdi-pinterest</v-icon>'
+                else if(shareButton.classList.contains('sharing-element-email')) shareButton.innerHTML = '<v-icon>mdi-email</v-icon>'
                 else shareButton.innerHTML = '<v-icon>mdi-link</v-icon>'
                 shareButtonsTemplate = shareButtonsTemplate + shareButton.outerHTML;
             }

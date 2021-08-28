@@ -511,6 +511,17 @@
       </b:section>
 
       <b:section class='LabelSection' id='LabelSection' name='Label Section' showaddelement='yes'>
+        <b:widget id='HTML1' locked='true' title='' type='HTML' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='content'><![CDATA[<v-subheader>Labels</v-subheader>]]></b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+        </b:widget>
         <b:widget id='Label1' locked='false' title='Cloud Labels' type='Label' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
@@ -2071,7 +2082,7 @@
       </b:section>
 
       <b:section class='BottomSection' id='BottomSection' name='Bottom Section' showaddelement='yes'>
-        <b:widget id='PageList1' locked='false' title='' type='PageList' version='2' visible='true'>
+        <b:widget id='PageList1' locked='true' title='' type='PageList' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='pageListJson'><![CDATA[{}]]></b:widget-setting>
             <b:widget-setting name='homeTitle'>Home</b:widget-setting>
@@ -2296,7 +2307,7 @@
       let labelSection = document.getElementById('LabelSection');
       if (labelSection !== undefined && labelSection !== null) {
           Vue.component('label-section', {
-              template: '<div id="LabelsWrapper"><v-subheader>Labels</v-subheader>' + labelSection.outerHTML + '</div>'
+              template: labelSection.outerHTML
           });
       }
 

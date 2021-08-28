@@ -2222,7 +2222,7 @@
               <v-row>
                 <v-col style='text-align: center;'>
                   <div>Copyright &#169; {{new Date().getFullYear()}} <blog-title/></div>
-                  <div>Theme: <a href='' target='_blank'>Vuetilog</a></div>
+                  <div>Theme: <a href='https://github.com/opdev1004/vuetilog' target='_blank'>Vuetilog</a></div>
                   <div>Design: <a href='https://github.com/opdev1004' target='_blank'>Victor Chanil Park</a></div>
                   <div class='blogger'>
                     <a href='https://www.blogger.com' rel='nofollow'><svg class='svg-icon-24'><use xlink:href='/responsive/sprite_v1_6.css.svg#ic_post_blogger_black_24dp' xmlns:xlink='http://www.w3.org/1999/xlink'/></svg> Powered by Blogger</a>

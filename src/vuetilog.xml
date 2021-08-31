@@ -1805,10 +1805,12 @@
             <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main' var='this'>
-            <b:include name='widget-title'/>
-            <div class='widget-content'>
-              <b:include name='snippetedPosts'/>
-            </div>
+            <b:if cond='data:posts.size &gt; 0 and not (data:posts[0].id == data:view.postId and data:posts.size == 1)'>
+              <b:include name='widget-title'/>
+              <div class='widget-content'>
+                <b:include name='snippetedPosts'/>
+              </div>
+            </b:if>
           </b:includable>
           <b:includable id='blogThisShare'>
             <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' var='onclick'>

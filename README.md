@@ -21,6 +21,12 @@ Blogger Theme built with Vue and Vuetify
 2. Restore theme with vuetilog.xml or copy and paste vuetilog theme in HTML edit.
 3. Edit any settings in your needs.
 
+### How to use code style in the post
+1. Select your code block in the editor by mouse dragging
+2. Set them as normal instead of paragraph
+3. Change to HTML view
+4. Set class to the div element for your code with "code". eg. ```class="code"``` 
+
 ### Layout System
 | Section | Description |
 | - | - |

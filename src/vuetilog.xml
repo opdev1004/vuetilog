@@ -8,17 +8,24 @@
     <link href='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css' rel='stylesheet'/>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui' name='viewport'/>
 
-    <b:if cond='data:view.isPost '>
+    <b:if cond='data:view.isPost'>
       <meta expr:content='data:blog.title' name='author'/>
       <meta expr:content='data:blog.title' name='writer'/>
       <meta content='article' property='og:type'/>
     </b:if>
+    
     <meta expr:content='data:blog.title' name='copyright'/>
     <meta expr:content='data:blog.url' name='url'/>
     <meta expr:content='data:blog.title' property='og:site_name'/>
-
-    <title><data:view.title.escaped/></title>
+    <b:if cond='data:blog.metaDescription'>
+      <meta expr:content='data:blog.metaDescription' name='description' />
+    <b:else/>
+      <meta expr:content='data:view.description' name='description'/>
+    </b:if>
+    <meta content='index' name='robots'/>
     <b:include data='blog' name='all-head-content'/>
+    
+    <title><data:view.title.escaped/></title>
 
     <b:skin><![CDATA[
 
@@ -47,7 +54,7 @@
         <Group description="Code">
             <Variable name="code.background.color" description="Code Background Color" type="color" default="#212121"  value="#212121"/>
             <Variable name="code.font.color" description="Code Font Color" type="color" default="#EEFFFF" value="#EEFFFF"/>
-			      <Variable name="code.border.color" description="Code border Color" type="color" default="#CCCCCC" value="#CCCCCC"/>
+			<Variable name="code.border.color" description="Code border Color" type="color" default="#CCCCCC" value="#CCCCCC"/>
         </Group>
 
         */
@@ -69,18 +76,18 @@
             height: auto;
         }
 
-      .code {
-        font-family: monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-        color: $(code.font.color) !important;
-        background-color: $(code.background.color) !important;
-              white-space: nowrap;
-              overflow-wrap: normal;
-              word-break: normal;
-              overflow-x: auto;
-        border: 1px solid $(code.border.color);
-        padding: 10px;
-        margin-bottom: 16px;
-      }
+		.code {
+			font-family: monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+			color: $(code.font.color) !important;
+			background-color: $(code.background.color) !important;
+            white-space: nowrap;
+            overflow-wrap: normal;
+            word-break: normal;
+            overflow-x: auto;
+			border: 1px solid $(code.border.color);
+			padding: 10px;
+			margin-bottom: 16px;
+		}
 
         #init-wrapper {
             display: none;
@@ -2105,7 +2112,7 @@
       <b:section class='BottomSection' id='BottomSection' name='Bottom Section' showaddelement='yes'>
         <b:widget id='PageList1' locked='true' title='' type='PageList' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='pageListJson'><![CDATA[{}]]></b:widget-setting>
+            <b:widget-setting name='pageListJson'><![CDATA[{'link0': {'href': 'http://vuetilog.blogspot.com/', 'title': 'Home', 'position': 0}, 'link1': {'href': 'https://github.com/opdev1004/vuetilog', 'title': 'Github', 'position': 1}, '3407789932173757444': {'href': 'https://vuetilog.blogspot.com/p/about.html', 'title': 'About', 'position': 2}}]]></b:widget-setting>
             <b:widget-setting name='homeTitle'>Home</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>

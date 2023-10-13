@@ -98,8 +98,8 @@
 			top: 20px !important;
             background-color: $(header.background.color) !important;
             color: $(header.font.color) !important;
-			left: calc(50% - 240px) !important;
-			width: 780px;
+			left: calc(50% - 230px) !important;
+			width: 760px;
         }
 		header #blog-title {
 			width: calc(100% - 48px);
@@ -216,6 +216,7 @@
         main .container {
             max-width: 780px;
             min-height: 100vh;
+			margin-top: -250px;
 			padding: 10px;
         }
 
@@ -507,6 +508,10 @@
                 min-height: 80px;
             }
 
+            main .container {
+                margin-top: 0px;
+            }
+
             main .container .post-outer .post-single {
                 padding: 0px;
             }
@@ -516,6 +521,14 @@
                 margin-bottom: 10px;
 				max-height: 240px;
 				overflow: hidden;
+            }
+
+            main .container .post iframe,
+            main .container .post object,
+            main .container .post embed
+            {
+                max-width: 760px;
+                max-height: 428px;
             }
 
             main .comments .title

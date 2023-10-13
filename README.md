@@ -8,7 +8,13 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
-Releasing version 0.1.0. The design has been updated. Popular posts and Featured post have been removed from vue components. You can use Popular posts and Featured posts from theme system instead. But you have to style them yourself.
+### Releasing version 0.1.1
+
+The design has been updated.
+
+### Releasing version 0.1.0
+
+The design has been updated. Popular posts and Featured post have been removed from vue components. You can use Popular posts and Featured posts from theme system instead. But you have to style them yourself.
 
 ## Example
 

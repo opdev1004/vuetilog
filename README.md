@@ -8,6 +8,10 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
+### Releasing version 0.1.2
+
+Updating how to use code style
+
 ### Releasing version 0.1.1
 
 The design has been updated.
@@ -39,10 +43,7 @@ The design has been updated. Popular posts and Featured post have been removed f
 
 ### How to use code style in the post
 
-1. Select your code block in the editor by mouse dragging
-2. Set them as normal instead of paragraph
-3. Change to HTML view
-4. Set class to the div element for your code with "code". eg. `class="code"`
+1. `<pre><code></code></pre>`
 
 ### Layout System
 

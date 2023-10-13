@@ -71,18 +71,24 @@
             width: auto;
             height: auto;
         }
-		.code {
-			font-family: 'Noto Sans Mono', monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-			color: $(code.font.color) !important;
-			background-color: $(code.background.color) !important;
-            white-space: nowrap;
-            overflow-wrap: normal;
+    pre {
+      background-color: $(code.background.color) !important;
+      color: $(code.font.color) !important;
+      border: 1px solid $(code.border.color);
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+      padding: 20px;
             word-break: normal;
-            overflow-x: auto;
-			border: 1px solid $(code.border.color);
-			padding: 10px;
-			margin-bottom: 16px;
-		}
+    }
+    code {
+      font-family: 'Noto Sans Mono', monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      color: $(code.font.color) !important;
+      background-color: $(code.background.color) !important;
+    }
+    code p {
+      margin-bottom: 0px !important;
+    }
         #init-wrapper {
             display: none;
         }

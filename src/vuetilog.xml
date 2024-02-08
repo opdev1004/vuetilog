@@ -1639,6 +1639,15 @@
           </div>
         </v-app-bar>
         <v-navigation-drawer :clipped='!desktop' app='true' fixed='true' v-model='drawer' width='300px'>
+          <v-list class='pa-0' v-if='!desktop'>
+            <v-list-item>
+              <v-row class='justify-end'>
+                <v-btn icon='true' v-on:click.stop='drawer = !drawer'>
+                  <v-icon color='white'>mdi-close</v-icon>
+                </v-btn>
+              </v-row>
+            </v-list-item>
+          </v-list>
           <nav-top/>
           <label-section/>
           <nav-bottom/>

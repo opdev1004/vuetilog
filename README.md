@@ -8,16 +8,20 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
-### Releasing version 0.1.3
+### Releasing version 0.1.5
+
+- Added close button for closing sidebar for non-desktop view
+
+### Releasing version 0.1.4
 
 - Changed body font color
 
 ### Releasing version 0.1.3
 
 - Fixed bug on header.
-- Removed pointless animation on multiple posts page.
+- Removed pointless animation on multiple posts page
 - Added body background color variables
-- Now title get smaller for non-desktop view.
+- Now title get smaller for non-desktop view
 
 ## Example
 

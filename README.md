@@ -10,6 +10,10 @@ Blogger Theme built with Vue and Vuetify
 
 ### Releasing version 0.1.3
 
+- Changed body font color
+
+### Releasing version 0.1.3
+
 - Fixed bug on header.
 - Removed pointless animation on multiple posts page.
 - Added body background color variables

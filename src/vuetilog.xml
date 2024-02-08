@@ -46,7 +46,7 @@
         </Group>
         <Group description="Body">
             <Variable name="body.background.color" description="Body Background Color" type="color" default="#E8F5E9"  value="#E8F5E9"/>
-			<Variable name="body.font.color" description="Body Font Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
+			<Variable name="body.font.color" description="Body Font Color" type="color" default="#000000" value="#000000"/>
         </Group>
         <Group description="Sidebar">
             <Variable name="sidebar.background.color" description="Sidebar Background Color" type="color" default="#212121"  value="#212121"/>

@@ -40,12 +40,16 @@
         -----------------------------------------------
         */
         /*
-        <Group description="Header">
-            <Variable name="header.background.color" description="Header Background Color" type="color" default="#FFFFFF"  value="#FFFFFF"/>
-            <Variable name="header.font.color" description="Header Font Color" type="color" default="#263238" value="#263238"/>
+        <Group description="Main">
+            <Variable name="main.background.color" description="Header Background Color" type="color" default="#FFFFFF"  value="#FFFFFF"/>
+            <Variable name="main.font.color" description="Header Font Color" type="color" default="#263238" value="#263238"/>
+        </Group>
+        <Group description="Body">
+            <Variable name="body.background.color" description="Body Background Color" type="color" default="#E8F5E9"  value="#E8F5E9"/>
+			<Variable name="body.font.color" description="Body Font Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
         </Group>
         <Group description="Sidebar">
-            <Variable name="sidebar.background.color" description="Sidebar Background Color" type="color" default="#B2DFDB"  value="#B2DFDB"/>
+            <Variable name="sidebar.background.color" description="Sidebar Background Color" type="color" default="#212121"  value="#212121"/>
             <Variable name="sidebar.font.color" description="Sidebar Font Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
         </Group>
         <Group description="Code">
@@ -71,24 +75,24 @@
             width: auto;
             height: auto;
         }
-    pre {
-      background-color: $(code.background.color) !important;
-      color: $(code.font.color) !important;
-      border: 1px solid $(code.border.color);
+		pre {
+			background-color: $(code.background.color) !important;
+			color: $(code.font.color) !important;
+			border: 1px solid $(code.border.color);
             overflow: auto;
             white-space: pre-wrap;
             word-wrap: break-word;
-      padding: 20px;
+			padding: 20px;
             word-break: normal;
-    }
-    code {
-      font-family: 'Noto Sans Mono', monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      color: $(code.font.color) !important;
-      background-color: $(code.background.color) !important;
-    }
-    code p {
-      margin-bottom: 0px !important;
-    }
+		}
+		code {
+			font-family: 'Noto Sans Mono', monaco, Consolas, "Lucida Console", Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+			color: $(code.font.color) !important;
+			background-color: $(code.background.color) !important;
+		}
+		code p {
+			margin-bottom: 0px !important;
+		}
         #init-wrapper {
             display: none;
         }
@@ -102,8 +106,8 @@
 		}
         header {
 			top: 20px !important;
-            background-color: $(header.background.color) !important;
-            color: $(header.font.color) !important;
+            background-color: $(main.background.color) !important;
+            color: $(main.font.color) !important;
 			left: calc(50% - 230px) !important;
 			width: 760px;
         }
@@ -119,10 +123,10 @@
 			width: 100% !important;
 		}
         header .v-icon {
-            color: $(header.font.color) !important;
+            color: $(main.font.color) !important;
         }
         header a {
-            color: $(header.font.color) !important; 
+            color: $(main.font.color) !important; 
         }
         header .SearchBar .v-input {
             width: 700px !important;
@@ -210,19 +214,15 @@
             text-overflow: ellipsis !important;
         }
 		
-        #bg-photo {
-          height: 40vh;
-        }
-
         main {
-			background-color: $(sidebar.background.color) !important;
-			color: $(sidebar.font.color) !important;
+			background-color: $(body.background.color) !important;
+			color: $(body.font.color) !important;
         }
 
         main .container {
             max-width: 780px;
             min-height: 100vh;
-			margin-top: -250px;
+			margin-top: 30px;
 			padding: 10px;
         }
 
@@ -263,11 +263,11 @@
         }
 
 		main .container .post-outer {
-			color: $(header.font.color) !important;
+			color: $(main.font.color) !important;
 		}
 
 		main .container .post-outer .post-single {
-			background-color: $(header.background.color) !important;
+			background-color: $(main.background.color) !important;
 			padding: 60px 30px 100px 30px;
 		}
 
@@ -277,15 +277,12 @@
 		}
 
 		main .container .post-outer .post-multiple {
-			background-color: $(header.background.color) !important;
+			background-color: $(main.background.color) !important;
 			padding: 30px 40px 40px 40px;
 			margin-bottom: 40px;
-			transition: all 0.1s ease;
-			transform: scale(1);
 		}
 
 		main .container .post-outer .post-multiple:hover {
-			transform: scale(1.02) perspective(1px)
 		}
 
         main .container .post-outer .post .separator a {
@@ -319,7 +316,7 @@
 		{
 			text-decoration: none;
 		}
-		/* fill: $(header.font.color); */
+		/* fill: $(main.font.color); */
 		main .container .sharing svg
 		{
 			fill: #FFFFFF;
@@ -382,7 +379,7 @@
         /* Comments */
         main .comments {
             margin-top: 30px;
-			color: $(header.font.color) !important;
+			color: $(main.font.color) !important;
         }
 	
 		main .comments .title
@@ -476,6 +473,10 @@
         main .comments .loadmore {
             display: none;
         }
+		main .comments #comment-editor
+		{
+			border-radius: 25px !important;
+		}
         main .comments .blogger-comment-from-post {
             margin: 20px auto;
         }
@@ -495,13 +496,17 @@
                 width: 100vw;
             }
 
+			header .blog-title {
+				font-size: 16px !important;
+			}
+
             header .SearchBar .v-input {
                 width: calc(100vw - 80px) !important;
             }
 
 			main {
-				color: $(header.font.color) !important;
-				background-color: $(header.background.color) !important;
+				color: $(main.font.color) !important;
+				background-color: $(main.background.color) !important;
 				padding-top: 80px !important;
 				top: 0 !important;
 			}
@@ -539,7 +544,7 @@
 
             main .comments .title
             {
-                color: $(header.font.color) !important;
+                color: $(main.font.color) !important;
                 margin-bottom: 20px;
             }
 
@@ -1529,7 +1534,7 @@
       <b:section class='BottomSection' id='BottomSection' name='Bottom Section' showaddelement='yes'>
         <b:widget id='PageList1' locked='true' title='' type='PageList' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='pageListJson'><![CDATA[{"0":{"href":"https://vuetilog.blogspot.com/","position":0,"title":"Home"},"3407789932173757444":{"href":"https://vuetilog.blogspot.com/p/about.html","position":2,"title":"About"},"link0":{"href":"https://github.com/opdev1004/vuetilog","position":1,"title":"Github"}}]]></b:widget-setting>
+            <b:widget-setting name='pageListJson'><![CDATA[{"3407789932173757444":{"href":"https://vuetilog.blogspot.com/p/about.html","position":1,"title":"About"},"link0":{"href":"https://github.com/opdev1004/vuetilog","position":0,"title":"Github"}}]]></b:widget-setting>
             <b:widget-setting name='homeTitle'>Home</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
@@ -1638,7 +1643,6 @@
           <label-section/>
           <nav-bottom/>
         </v-navigation-drawer>
-        <img id='bg-photo' src='https://themes.googleusercontent.com/image?id=iOjEWmpWlNVmx91RAaWC3irZSyq8cu05pASFz84khXxbIM83x8QP6Hnw7ZIDcZFvcAGSBpGCNsBC'/>
         <v-main>
           <v-container fluid='true'>
             <main-content-top/>
@@ -1825,6 +1829,10 @@
 			      this.drawer = true;
 				  this.desktop = true;
 			  }
+			  else
+		      {
+				  this.desktop = false;
+		      }
 
 			  window.addEventListener('resize', () => {
 				  this.desktop = window.innerWidth > 1263;

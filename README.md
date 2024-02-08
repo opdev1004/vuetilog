@@ -8,17 +8,12 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
-### Releasing version 0.1.2
+### Releasing version 0.1.3
 
-Updating how to use code style
-
-### Releasing version 0.1.1
-
-The design has been updated.
-
-### Releasing version 0.1.0
-
-The design has been updated. Popular posts and Featured post have been removed from vue components. You can use Popular posts and Featured posts from theme system instead. But you have to style them yourself.
+- Fixed bug on header.
+- Removed pointless animation on multiple posts page.
+- Added body background color variables
+- Now title get smaller for non-desktop view.
 
 ## Example
 

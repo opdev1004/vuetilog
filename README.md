@@ -8,6 +8,10 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
+### Releasing version 0.1.6
+
+- Changing comments title element's color variable to body.font.color from sidebar.font.color
+
 ### Releasing version 0.1.5
 
 - Added close button for closing sidebar for non-desktop view

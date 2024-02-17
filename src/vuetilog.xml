@@ -384,7 +384,7 @@
 	
 		main .comments .title
 		{
-			color: $(sidebar.font.color) !important;
+			color: $(body.font.color) !important;
 			margin-bottom: 40px;
 		}
         main .comments ol {

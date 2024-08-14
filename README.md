@@ -8,6 +8,10 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
+### Releasing version 0.1.7
+
+- Adding 18px bottom margin to heading tags. h1-h6.
+
 ### Releasing version 0.1.6
 
 - Changing comments title element's color variable to body.font.color from sidebar.font.color
@@ -19,13 +23,6 @@ Blogger Theme built with Vue and Vuetify
 ### Releasing version 0.1.4
 
 - Changed body font color
-
-### Releasing version 0.1.3
-
-- Fixed bug on header.
-- Removed pointless animation on multiple posts page
-- Added body background color variables
-- Now title get smaller for non-desktop view
 
 ## Example
 

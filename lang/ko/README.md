@@ -1,12 +1,12 @@
-# Vuetilog (뷰티로그)
+# Vuetilog (뷰티로그) 🥇
 
 Vue와 Vuetify로 만든 블로거 테마
 
-## 공지
+## 공지 📢
 
 ### 0.1.8 버전을 릴리즈 합니다
 
-- 댓글의 답글(Reply)이 작동하지 않던 것을 픽스하였습니다. 그에 따라, 작동하게 만들기 위해 어쩔 수 없이 디자인 변경을 진행하였습니다.
+- 댓글의 답글(Reply)이 작동하지 않던 것을 픽스하였습니다. 그에 따라, 작동하게 만들기 위해 어쩔 수 없이 디자인 변경을 진행하였습니다. 밑의 v0.1.8부터 레이아웃 페이지에서 블로그 위젯 편집도 확인해주세요.
 
 ### 0.1.7 버전을 릴리즈 합니다
 
@@ -44,6 +44,22 @@ Vue와 Vuetify로 만든 블로거 테마
 1. Contempo 테마를 블로그에 적용
 2. vuetilog.xml로 테마를 복구하거나 HTML 수정을 통해 테마를 붙여넣고 저장
 3. 필요에 따라 설정 수정
+
+### v0.1.8부터 레이아웃 페이지에서 블로그 위젯 편집
+
+일부 섹션과 위젯이 레이아웃 페이지에 표시되지 않습니다. Blogger 시스템은 Vue 및 Vuetify의 구문을 파싱 할 수 없기 때문입니다. 블로그 게시물 위젯을 편집하는 방법에는 두 가지가 있습니다. 이 작업은 블로그 위젯 설정을 위해 설치 후 한 번만 하면 될 겁니다.
+
+1. 테마 페이지의 HTML 편집에서 `Blog Widget` 스크립트를 다른 섹션(`Components` 섹션과 같은 곳)으로 이동시킵니다. HTML 편집의 왼쪽 라인 번호 표시줄에 있는 래핑 화살표를 사용하면 태그 블록을 쉽게 복사하여 붙여넣을 수 있습니다. 그런 다음 레이아웃 페이지에서 '블로그 위젯'을 편집할 수 있습니다. 작업이 완료되면 원래 위치로 다시 옮기고 블로그를 이용하면 됩니다.
+
+```
+<b:section class='Blog' id='Blog' name='Blog' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+... more code
+</b:widget>
+</b:section>
+```
+
+2. HTML 편집에서 수동으로 편집. 저는 추천하지 않습니다.
 
 ### 포스트에서 코드 스타일 사용하는 방법
 
@@ -95,9 +111,6 @@ Vuetilog를 발전시키는 것을 환영합니다.
 | main-content-top    | Main Page              | 메인 위젯들을 위한 컴포넌트     |
 | main-content-bottom | Main Page              | 메인 위젯들을 위한 컴포넌트     |
 | pagination          | Main Page              | 페이지 네비게이션 컴포넌트      |
-| posts               | Main Page              | 포스트, 페이지 컴포넌트         |
-| comments            | Main Page              | 댓글 컴포넌트                   |
-| post-feeds          | Main Page              | 피드 링크 컴포넌트              |
 | bottom-section      | Main Page              | Footer 위젯들을 위한 컴포넌트   |
 
 ### 👼 후원하기

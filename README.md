@@ -1,4 +1,4 @@
-# Vuetilog
+# Vuetilog 🥇
 
 Blogger Theme built with Vue and Vuetify
 
@@ -6,11 +6,11 @@ Blogger Theme built with Vue and Vuetify
 
 [한국어](/lang/ko)
 
-## Notice
+## Notice 📢
 
 ### Releasing version 0.1.8
 
-- Fixed 'Reply' button. And this causes blog theme design changes, because theme needs to place blog post widget as it is provided from blogger system.
+- Fixed 'Reply' button. And this causes blog theme design changes, because theme needs to place blog post widget as it is provided from blogger system. Please have a look at `Editing Blog Widget in layout page from v0.1.8` bottom of this document.
 
 ### Releasing version 0.1.7
 
@@ -24,7 +24,7 @@ Blogger Theme built with Vue and Vuetify
 
 - Added close button for closing sidebar for non-desktop view
 
-## Example
+## Example 📖
 
 [https://vuetilog.blogspot.com/](https://vuetilog.blogspot.com/)
 
@@ -44,6 +44,22 @@ Blogger Theme built with Vue and Vuetify
 1. Apply Contempo theme to your blog.
 2. Restore theme with vuetilog.xml or copy and paste vuetilog theme in HTML edit.
 3. Edit any settings in your needs.
+
+### Editing Blog Widget in layout page from v0.1.8
+
+Some of section and widget would not show in layout page. Because Blogger's system cannot parse Vue and Vuetify's syntax. There are 2 ways to edit blog post widget. And you probably only need to do this once after install this theme for customization.
+
+1. Move `Blog Widget` script to other Section (Somewhere like `Components` Section) from HTML Edit from Theme page. If you use wrapping arrow on the left side line number bar of HTML edit, you can easily copy and paste block of tag. Then you can edit `Blog Widget` from your layout page. Once you are done, you can copy that back to where it was.
+
+```
+<b:section class='Blog' id='Blog' name='Blog' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+... more code
+</b:widget>
+</b:section>
+```
+
+2. Edit manually from HTML Edit. I don't recommend this.
 
 ### How to use code style in the post
 
@@ -95,9 +111,6 @@ As long as your tags are part of components and vue app template, they are going
 | main-content-top    | Main Page              | This component is for any widgets for main page. eg. ads   |
 | main-content-bottom | Main Page              | This component is for any widgets for main page. eg. ads   |
 | pagination          | Main Page              | This component is for placing pagination.                  |
-| posts               | Main Page              | This component is for placing blog posts and pages.        |
-| comments            | Main Page              | This component is for placing comments.                    |
-| post-feeds          | Main Page              | This component is for placing post feeds link.             |
 | bottom-section      | Main Page              | This component is designed for footer of blog.             |
 
 ### 👼 Become a Sponsor

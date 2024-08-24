@@ -8,6 +8,10 @@ Blogger Theme built with Vue and Vuetify
 
 ## Notice
 
+### Releasing version 0.1.8
+
+- Fixed 'Reply' button. And this causes blog theme design changes, because theme needs to place blog post widget as it is provided from blogger system.
+
 ### Releasing version 0.1.7
 
 - Adding 18px bottom margin to heading tags. h1-h6.
@@ -19,10 +23,6 @@ Blogger Theme built with Vue and Vuetify
 ### Releasing version 0.1.5
 
 - Added close button for closing sidebar for non-desktop view
-
-### Releasing version 0.1.4
-
-- Changed body font color
 
 ## Example
 

@@ -1,3 +1,9 @@
+# Notice 📢
+This theme is no longer supported. The problem is Vue3 would nont work and Vue2 is deprecated.
+If you still want a blogger theme that works, try [OP Blogger Theme](https://github.com/opdev1004/op-blogger-themes).
+I decided not to use any web app frameworks like vue or react for blogger theme development.
+
+
 # Vuetilog 🥇
 
 Blogger Theme built with Vue and Vuetify

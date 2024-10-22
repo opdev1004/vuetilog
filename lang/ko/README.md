@@ -1,3 +1,6 @@
+# 공지 📢
+이 테마는 더 이상 지원되지 않습니다. Vue3는 적용이 불가능하고 Vue2는 지원이 끊깁니다. 그래도 작동하는 블로거 테마가 필요하다면 [OP 블로거 테마](https://github.com/opdev1004/op-blogger-themes/blob/master/lang/ko/README.md)를 이용해주세요. 앞으로는 뷰와 리액트 같은 웹 앱 프레임워크를 테마 개발에 사용하지 않기로 하였습니다.
+
 # Vuetilog (뷰티로그) 🥇
 
 Vue와 Vuetify로 만든 블로거 테마
